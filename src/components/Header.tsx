@@ -24,10 +24,10 @@ export default function Header() {
       
       <nav className="flex gap-8 text-xs font-medium tracking-widest uppercase text-gray-500">
         <Link href="#about" className="hover:text-editorial-orange transition-colors">
-          Informações
+          Sobre Mim
         </Link>
         <Link href="#projects" className="hover:text-editorial-orange transition-colors">
-          Projetos Selecionados
+          Projetos
         </Link>
       </nav>
     </motion.header>

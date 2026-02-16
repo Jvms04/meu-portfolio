@@ -85,10 +85,10 @@ export default function About() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
           >
-            <h4 className="text-editorial-orange text-xs font-bold tracking-widest uppercase mb-4">
+            <h4 className="text-editorial-orange text-md font-bold tracking-widest uppercase mb-4">
               Contato
             </h4>
-            <ul className="space-y-2 text-sm text-gray-600">
+            <ul className="space-y-2 text-md text-gray-600">
               <li>
                 <Link href="https://www.linkedin.com/in/joaovitormocosantos/" target="_blank" className="hover:text-editorial-orange transition-colors">
                   LinkedIn
@@ -99,8 +99,37 @@ export default function About() {
                   GitHub
                 </Link>
               </li>
-             
             </ul>
+
+            <h4 className="text-editorial-orange text-md font-bold tracking-widest uppercase mt-8 mb-4">
+              Currículo
+            </h4>
+            <div className="flex flex-col gap-3">
+              <a
+                href="/curriculo/Curriculo - João Vítor Moço Santos.pdf"
+                download
+                className="group inline-flex items-center gap-2 border border-editorial-orange text-editorial-orange px-4 py-2.5 text-xs font-bold tracking-widest uppercase transition-all duration-300 hover:bg-editorial-orange hover:text-white"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-y-0.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Português
+              </a>
+              <a
+                href="/curriculo/Curriculum - João Vítor Moço Santos.pdf"
+                download
+                className="group inline-flex items-center gap-2 border border-editorial-orange text-editorial-orange px-4 py-2.5 text-xs font-bold tracking-widest uppercase transition-all duration-300 hover:bg-editorial-orange hover:text-white"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-y-0.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                English
+              </a>
+            </div>
           </motion.div>
 
         </div>
