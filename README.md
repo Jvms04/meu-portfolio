@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🖥️ Personal Portfolio | João Vítor
 
-## Getting Started
+Este é o repositório do meu portfólio pessoal, desenvolvido com foco em performance, tipografia e design editorial. O objetivo é apresentar meus projetos e habilidades como **Desenvolvedor Full Stack** de forma clara e profissional.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🎨 Conceito Visual
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O design foge do padrão comum de portfólios de TI. Ele utiliza uma estética **minimalista e tipográfica**, inspirada em layouts de revistas e editoriais modernos. 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Ritmo Visual:** As seções de habilidades e textos utilizam variações de escala para criar uma hierarquia dinâmica.
+* **Foco em Conteúdo:** Interface limpa para destacar o que importa: o código e a experiência.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tecnologias Utilizadas
 
-To learn more about Next.js, take a look at the following resources:
+O projeto foi construído puramente com o stack moderno de Frontend:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Framework:** [Next.js](https://nextjs.org/) (App Router)
+* **Biblioteca UI:** [React](https://reactjs.org/)
+* **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
+* **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 Funcionalidades
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* **Responsive Design:** Adaptado para dispositivos móveis, tablets e desktops.
+* **SEO Optimized:** Estruturado para ser bem indexado por motores de busca.
+* **Performance:** Carregamento rápido utilizando as otimizações nativas do Next.js.
+* **Type Safety:** Código totalmente tipado com TypeScript para maior manutenibilidade.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
