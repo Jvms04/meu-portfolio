@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
 
 const skills = [
   { name: "React", size: "text-6xl md:text-8xl" },
@@ -20,7 +21,29 @@ const skills = [
   { name: "FastAPI", size: "text-5xl md:text-5xl" },
 ];
 
+const content = {
+  pt: {
+    skillsLabel: 'Habilidades',
+    aboutLabel: 'Sobre',
+    aboutText:
+      'Acredito que a tecnologia deve ser invisível e o design, intencional. Como desenvolvedor full stack, busco o equilíbrio entre a estética editorial refinada e a robustez técnica necessária para o mercado moderno.',
+    contactLabel: 'Contato',
+    resumeLabel: 'Currículo',
+  },
+  en: {
+    skillsLabel: 'Skills',
+    aboutLabel: 'About',
+    aboutText:
+      'I believe technology should be invisible and design, intentional. As a full stack developer, I seek the balance between refined editorial aesthetics and the technical robustness required by the modern market.',
+    contactLabel: 'Contact',
+    resumeLabel: 'Resume',
+  },
+};
+
 export default function About() {
+  const { language } = useLanguage();
+  const t = content[language];
+
   return (
     <section id="about" className="py-24 px-6 md:px-12 bg-[#F5F5F0]">
       <div className="max-w-7xl mx-auto space-y-24">
@@ -31,10 +54,10 @@ export default function About() {
             className="block text-editorial-orange text-xs font-bold tracking-widest uppercase mb-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6 }}
           >
-            Habilidades
+            {t.skillsLabel}
           </motion.span>
 
           <div className="flex flex-wrap items-baseline justify-center gap-x-8 gap-y-4">
@@ -44,7 +67,7 @@ export default function About() {
                 className={`font-serif ${skill.size} text-editorial-orange`}
                 initial={{ opacity: 0, y: 30, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: "-60px" }}
+                viewport={{ once: true, margin: '-60px' }}
                 transition={{
                   duration: 0.6,
                   delay: i * 0.05,
@@ -65,15 +88,15 @@ export default function About() {
             className="md:w-2/3"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
             <span className="block text-editorial-orange text-xs font-bold tracking-widest uppercase mb-8">
-              Sobre
+              {t.aboutLabel}
             </span>
 
             <p className="font-serif text-3xl md:text-5xl leading-tight text-editorial-orange max-w-3xl">
-              Acredito que a tecnologia deve ser invisível e o design, intencional. Como desenvolvedor full stack, busco o equilíbrio entre a estética editorial refinada e a robustez técnica necessária para o mercado moderno.
+              {t.aboutText}
             </p>
           </motion.div>
 
@@ -82,11 +105,11 @@ export default function About() {
             className="md:w-1/3 md:pt-12"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
           >
             <h4 className="text-editorial-orange text-md font-bold tracking-widest uppercase mb-4">
-              Contato
+              {t.contactLabel}
             </h4>
             <ul className="space-y-2 text-md text-gray-600">
               <li>
@@ -102,7 +125,7 @@ export default function About() {
             </ul>
 
             <h4 className="text-editorial-orange text-md font-bold tracking-widest uppercase mt-8 mb-4">
-              Currículo
+              {t.resumeLabel}
             </h4>
             <div className="flex flex-col gap-3">
               <a

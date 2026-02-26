@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/context/LanguageContext';
 import FadingSlideshow from './media/FadingSlideshow';
 import VideoLoop from './media/VideoLoop';
 import BeforeAfterSlider from './media/BeforeAfterSlider';
@@ -13,12 +14,9 @@ type MediaType = 'slideshow' | 'video' | 'before-after' | 'coming-soon';
 
 interface ProjectMedia {
   type: MediaType;
-  // Slideshow
   images?: string[];
-  // Video
   videoSrc?: string;
   videoPoster?: string;
-  // Before/After
   beforeImage?: string;
   afterImage?: string;
 }
@@ -35,45 +33,88 @@ interface Project {
   media: ProjectMedia;
 }
 
-// ─── Data ────────────────────────────────────────────────
+// ─── Data (bilíngue) ─────────────────────────────────────
 
-const projects: Project[] = [
-  {
-    number: "01",
-    type: "COMMERCIAL PROJECT",
-    title: "SITE COMERCIAL CORPORATIVO",
-    description: "Reconstrução integral da plataforma institucional utilizando tecnologias de ponta para garantir máxima performance. Responsável pela definição da stack e implementação de interfaces dinâmicas, elevando o padrão tecnológico da entrega corporativa.",
-    tags: "NEXT.JS / REACT / TYPESCRIPT / TAILWIND CSS",
-    link: "https://centaurotelecom.vercel.app/",
-    reversed: false,
-    media: {
-      type: 'slideshow',
-      images: [
-        '/projetos/site-comercial-01.webp',
-        '/projetos/site-comercial-2.webp',
-        '/projetos/site-comercial-3.webp',
-      ],
+const projects: { pt: Project[]; en: Project[] } = {
+  pt: [
+    {
+      number: '01',
+      type: 'COMMERCIAL PROJECT',
+      title: 'SITE COMERCIAL CORPORATIVO',
+      description:
+        'Reconstrução integral da plataforma institucional utilizando tecnologias de ponta para garantir máxima performance. Responsável pela definição da stack e implementação de interfaces dinâmicas, elevando o padrão tecnológico da entrega corporativa.',
+      tags: 'NEXT.JS / REACT / TYPESCRIPT / TAILWIND CSS',
+      link: 'https://centaurotelecom.vercel.app/',
+      reversed: false,
+      media: {
+        type: 'slideshow',
+        images: [
+          '/projetos/site-comercial-01.webp',
+          '/projetos/site-comercial-2.webp',
+          '/projetos/site-comercial-3.webp',
+        ],
+      },
     },
-  },
-  {
-    number: "02",
-    type: "SAAS DEVELOPMENT",
-    title: "ABNT: ENGENHARIA DOCUMENTAL",
-    description: "Desenvolvimento de uma plataforma inteligente para a automação rigorosa de normas acadêmicas. O projeto utiliza Inteligência Artificial para processamento de linguagem natural e um backend robusto em Python, transformando a complexidade das regras da ABNT em uma experiência de formatação invisível e precisa.",
-    tags: "NEXT.JS / REACT / FASTAPI / POSTGRESQL / AI API",
-    link: "#",
-    reversed: true,
-    comingSoon: true,
-    media: {
-      type: 'slideshow',
-      images: [
-        '/projetos/saas1.webp',
-        '/projetos/saas2.webp',
-        '/projetos/saas3.webp',
-      ],
+    {
+      number: '02',
+      type: 'SAAS DEVELOPMENT',
+      title: 'ABNT: ENGENHARIA DOCUMENTAL',
+      description:
+        'Desenvolvimento de uma plataforma inteligente para a automação rigorosa de normas acadêmicas. O projeto utiliza Inteligência Artificial para processamento de linguagem natural e um backend robusto em Python, transformando a complexidade das regras da ABNT em uma experiência de formatação invisível e precisa.',
+      tags: 'NEXT.JS / REACT / FASTAPI / POSTGRESQL / AI API',
+      link: '#',
+      reversed: true,
+      comingSoon: true,
+      media: {
+        type: 'slideshow',
+        images: [
+          '/projetos/saas1.webp',
+          '/projetos/saas2.webp',
+          '/projetos/saas3.webp',
+        ],
+      },
     },
-  },
-];
+  ],
+  en: [
+    {
+      number: '01',
+      type: 'COMMERCIAL PROJECT',
+      title: 'CORPORATE WEBSITE',
+      description:
+        'Full rebuild of the institutional platform using cutting-edge technologies to ensure maximum performance. Responsible for defining the tech stack and implementing dynamic interfaces, raising the technological standard of the corporate delivery.',
+      tags: 'NEXT.JS / REACT / TYPESCRIPT / TAILWIND CSS',
+      link: 'https://centaurotelecom.vercel.app/',
+      reversed: false,
+      media: {
+        type: 'slideshow',
+        images: [
+          '/projetos/site-comercial-01.webp',
+          '/projetos/site-comercial-2.webp',
+          '/projetos/site-comercial-3.webp',
+        ],
+      },
+    },
+    {
+      number: '02',
+      type: 'SAAS DEVELOPMENT',
+      title: 'ABNT: DOCUMENT ENGINEERING',
+      description:
+        'Development of an intelligent platform for rigorous automation of academic formatting standards. The project uses Artificial Intelligence for natural language processing and a robust Python backend, turning the complexity of ABNT rules into an invisible and precise formatting experience.',
+      tags: 'NEXT.JS / REACT / FASTAPI / POSTGRESQL / AI API',
+      link: '#',
+      reversed: true,
+      comingSoon: true,
+      media: {
+        type: 'slideshow',
+        images: [
+          '/projetos/saas1.webp',
+          '/projetos/saas2.webp',
+          '/projetos/saas3.webp',
+        ],
+      },
+    },
+  ],
+};
 
 // ─── Media Renderer ──────────────────────────────────────
 
@@ -100,10 +141,15 @@ function ProjectMedia({ media }: { media: ProjectMedia }) {
 // ─── Main Component ──────────────────────────────────────
 
 export default function Projetos() {
+  const { language } = useLanguage();
+  const list = projects[language];
+  const visitLabel = language === 'pt' ? 'Visitar Site' : 'Visit Site';
+  const inDevLabel = language === 'pt' ? 'Em Desenvolvimento' : 'In Development';
+
   return (
     <section id="projects" className="py-24 px-6 md:px-12 bg-[#F5F5F0]">
       <div className="max-w-7xl mx-auto space-y-32">
-        {projects.map((project, index) => (
+        {list.map((project, index) => (
           <div
             key={project.number}
             className={`flex flex-col md:flex-row gap-12 md:gap-24 items-center ${
@@ -115,13 +161,13 @@ export default function Projetos() {
               className="w-full md:w-3/5 relative"
               initial={{ opacity: 0, x: project.reversed ? 60 : -60 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             >
               <ProjectMedia media={project.media} />
               {project.comingSoon && (
                 <div className="absolute top-4 left-4 bg-editorial-orange text-white text-[10px] font-bold tracking-[0.2em] uppercase px-4 py-2 rounded-sm z-10">
-                  Em Desenvolvimento
+                  {inDevLabel}
                 </div>
               )}
             </motion.div>
@@ -131,7 +177,7 @@ export default function Projetos() {
               className="w-full md:w-2/5 space-y-6"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
+              viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             >
               <div className="text-xs font-bold tracking-widest text-editorial-orange uppercase">
@@ -157,7 +203,7 @@ export default function Projetos() {
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 border border-editorial-orange text-editorial-orange px-5 py-3 text-xs font-bold tracking-widest uppercase transition-all duration-300 hover:bg-editorial-orange hover:text-white mt-2"
                 >
-                  Visitar Site
+                  {visitLabel}
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-x-1">
                     <path d="M7 17L17 7" />
                     <path d="M7 7h10v10" />
@@ -171,4 +217,3 @@ export default function Projetos() {
     </section>
   );
 }
-
