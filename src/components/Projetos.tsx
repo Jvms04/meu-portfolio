@@ -41,16 +41,15 @@ const projects: Project[] = [
   {
     number: "01",
     type: "COMMERCIAL PROJECT",
-    title: "ECOSSISTEMA DIGITAL MODERNO",
+    title: "SITE COMERCIAL CORPORATIVO",
     description: "Reconstrução integral da plataforma institucional utilizando tecnologias de ponta para garantir máxima performance. Responsável pela definição da stack e implementação de interfaces dinâmicas, elevando o padrão tecnológico da entrega corporativa.",
     tags: "NEXT.JS / REACT / TYPESCRIPT / TAILWIND CSS",
-    link: "#",
+    link: "https://centaurotelecom.vercel.app/",
     reversed: false,
-    comingSoon: true,
     media: {
       type: 'slideshow',
       images: [
-        '/projetos/site-comercial-1.webp',
+        '/projetos/site-comercial-01.webp',
         '/projetos/site-comercial-2.webp',
         '/projetos/site-comercial-3.webp',
       ],
@@ -150,6 +149,21 @@ export default function Projetos() {
               <div className="text-[10px] font-bold tracking-widest uppercase text-editorial-orange pt-2">
                 {project.tags}
               </div>
+
+              {project.link && project.link !== '#' && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 border border-editorial-orange text-editorial-orange px-5 py-3 text-xs font-bold tracking-widest uppercase transition-all duration-300 hover:bg-editorial-orange hover:text-white mt-2"
+                >
+                  Visitar Site
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-x-1">
+                    <path d="M7 17L17 7" />
+                    <path d="M7 7h10v10" />
+                  </svg>
+                </a>
+              )}
             </motion.div>
           </div>
         ))}

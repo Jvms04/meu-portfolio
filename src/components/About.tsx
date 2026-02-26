@@ -107,7 +107,8 @@ export default function About() {
             <div className="flex flex-col gap-3">
               <a
                 href="/curriculo/Curriculo - João Vítor Moço Santos.pdf"
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 border border-editorial-orange text-editorial-orange px-4 py-2.5 text-xs font-bold tracking-widest uppercase transition-all duration-300 hover:bg-editorial-orange hover:text-white"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-y-0.5">
@@ -119,7 +120,8 @@ export default function About() {
               </a>
               <a
                 href="/curriculo/Curriculum - João Vítor Moço Santos.pdf"
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 border border-editorial-orange text-editorial-orange px-4 py-2.5 text-xs font-bold tracking-widest uppercase transition-all duration-300 hover:bg-editorial-orange hover:text-white"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-y-0.5">
