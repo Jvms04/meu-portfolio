@@ -23,7 +23,7 @@ export default function Header() {
       </div>
       
       <nav className="flex gap-8 text-xs font-medium tracking-widest uppercase text-gray-500">
-        <Link href="#about" className="hover:text-editorial-orange transition-colors">
+        <Link href="#trajetoria" className="hover:text-editorial-orange transition-colors">
           Sobre Mim
         </Link>
         <Link href="#projects" className="hover:text-editorial-orange transition-colors">
