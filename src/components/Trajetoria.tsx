@@ -8,7 +8,7 @@ const content = {
     sectionTitle: 'TRAJETÓRIA',
     journeyLabel: 'Minha Jornada',
     journeyDesc:
-      'Conheço meus Projetos. Minha trajetória é guiada pela curiosidade e pela busca constante por novas experiências e habilidades.',
+      'Conheça meus Projetos. Minha trajetória é guiada pela curiosidade e pela busca constante por novas experiências e habilidades.',
     timeline: [
       {
         year: '2025 — Presente',
