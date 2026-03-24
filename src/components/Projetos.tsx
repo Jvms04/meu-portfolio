@@ -44,7 +44,7 @@ const projects: { pt: Project[]; en: Project[] } = {
       description:
         'Reconstrução integral da plataforma institucional utilizando tecnologias de ponta para garantir máxima performance. Responsável pela definição da stack e implementação de interfaces dinâmicas, elevando o padrão tecnológico da entrega corporativa.',
       tags: 'NEXT.JS / REACT / TYPESCRIPT / TAILWIND CSS',
-      link: 'https://centaurotelecom.vercel.app/',
+      link: 'https://www.centaurotelecom.com.br/',
       reversed: false,
       media: {
         type: 'slideshow',
