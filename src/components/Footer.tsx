@@ -20,7 +20,7 @@ export default function Footer() {
 
   return (
     <motion.footer
-      className="px-6 md:px-12 py-12 flex flex-col md:flex-row justify-between items-center text-xs tracking-widest uppercase text-gray-500 border-t border-gray-200"
+      className="px-4 sm:px-6 md:px-12 py-12 flex flex-col md:flex-row justify-between items-center text-center md:text-left text-xs tracking-widest uppercase text-gray-500 border-t border-gray-200 gap-4 md:gap-0"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}

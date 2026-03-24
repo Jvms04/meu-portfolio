@@ -55,12 +55,12 @@ export default function Trajetoria() {
   const t = content[language];
 
   return (
-    <section id="trajetoria" className="py-24 px-6 md:px-12">
+    <section id="trajetoria" className="py-24 px-4 sm:px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
 
         {/* Section Title */}
         <motion.h2
-          className="font-serif text-7xl md:text-[8vw] text-editorial-orange leading-none mb-20"
+          className="font-serif text-5xl sm:text-6xl md:text-[8vw] text-editorial-orange leading-none mb-20"
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
@@ -104,7 +104,7 @@ export default function Trajetoria() {
                 {t.timeline.map((item, index) => (
                   <motion.div
                     key={index}
-                    className="relative pl-10"
+                    className="relative pl-6 sm:pl-10"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: '-80px' }}

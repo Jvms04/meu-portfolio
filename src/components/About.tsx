@@ -5,20 +5,20 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 
 const skills = [
-  { name: "React", size: "text-6xl md:text-8xl" },
-  { name: "PHP", size: "text-2xl md:text-3xl" },
-  { name: "Next.js", size: "text-7xl md:text-9xl" },
-  { name: "SQL", size: "text-xl md:text-2xl" },
-  { name: "TypeScript", size: "text-6xl md:text-8xl" },
-  { name: "PostgreSQL", size: "text-2xl md:text-3xl" },
-  { name: "Git", size: "text-xl md:text-2xl" },
-  { name: "Node.js", size: "text-5xl md:text-7xl" },
-  { name: "HTML", size: "text-2xl md:text-3xl" },
-  { name: "Tailwind", size: "text-4xl md:text-6xl" },
-  { name: "CSS", size: "text-xl md:text-2xl" },
-  { name: "Python", size: "text-4xl md:text-6xl" },
-  { name: "Javascript", size: "text-6xl md:text-8xl" },
-  { name: "FastAPI", size: "text-5xl md:text-5xl" },
+  { name: "React", size: "text-4xl sm:text-5xl md:text-8xl" },
+  { name: "PHP", size: "text-xl sm:text-2xl md:text-3xl" },
+  { name: "Next.js", size: "text-5xl sm:text-6xl md:text-9xl" },
+  { name: "SQL", size: "text-lg sm:text-xl md:text-2xl" },
+  { name: "TypeScript", size: "text-4xl sm:text-5xl md:text-8xl" },
+  { name: "PostgreSQL", size: "text-xl sm:text-2xl md:text-3xl" },
+  { name: "Git", size: "text-lg sm:text-xl md:text-2xl" },
+  { name: "Node.js", size: "text-4xl sm:text-5xl md:text-7xl" },
+  { name: "HTML", size: "text-xl sm:text-2xl md:text-3xl" },
+  { name: "Tailwind", size: "text-3xl sm:text-4xl md:text-6xl" },
+  { name: "CSS", size: "text-lg sm:text-xl md:text-2xl" },
+  { name: "Python", size: "text-3xl sm:text-4xl md:text-6xl" },
+  { name: "Javascript", size: "text-4xl sm:text-5xl md:text-8xl" },
+  { name: "FastAPI", size: "text-4xl sm:text-5xl md:text-5xl" },
 ];
 
 const content = {
@@ -45,7 +45,7 @@ export default function About() {
   const t = content[language];
 
   return (
-    <section id="about" className="py-24 px-6 md:px-12 bg-[#F5F5F0]">
+    <section id="about" className="py-24 px-4 sm:px-6 md:px-12 bg-[#F5F5F0]">
       <div className="max-w-7xl mx-auto space-y-24">
 
         {/* ─── Skills Tag Cloud ─────────────────────────────── */}
@@ -95,7 +95,7 @@ export default function About() {
               {t.aboutLabel}
             </span>
 
-            <p className="font-serif text-3xl md:text-5xl leading-tight text-editorial-orange max-w-3xl">
+            <p className="font-serif text-2xl sm:text-3xl md:text-5xl leading-tight text-editorial-orange max-w-3xl">
               {t.aboutText}
             </p>
           </motion.div>

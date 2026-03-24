@@ -36,7 +36,7 @@ export default function Hero() {
   const t = content[language];
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center px-4 sm:px-6 md:px-12 pt-20 overflow-hidden">
       
       {/* Main Title */}
       <h1 className="font-serif text-[11vw] leading-[0.85] tracking-tight text-editorial-orange uppercase mb-12">
@@ -61,7 +61,7 @@ export default function Hero() {
       </h1>
 
       {/* Footer of Hero */}
-      <div className="flex flex-col md:flex-row justify-between items-end w-full mt-12 gap-10">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end w-full mt-12 gap-10">
         
         {/* Left Text */}
         <motion.div

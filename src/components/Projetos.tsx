@@ -147,7 +147,7 @@ export default function Projetos() {
   const inDevLabel = language === 'pt' ? 'Em Desenvolvimento' : 'In Development';
 
   return (
-    <section id="projects" className="py-24 px-6 md:px-12 bg-[#F5F5F0]">
+    <section id="projects" className="py-24 px-4 sm:px-6 md:px-12 bg-[#F5F5F0]">
       <div className="max-w-7xl mx-auto space-y-32">
         {list.map((project, index) => (
           <div
@@ -184,7 +184,7 @@ export default function Projetos() {
                 {project.number} — {project.type}
               </div>
 
-              <h3 className="font-serif text-5xl md:text-6xl text-editorial-orange leading-tight">
+              <h3 className="font-serif text-4xl sm:text-5xl md:text-6xl text-editorial-orange leading-tight">
                 {project.title}
               </h3>
 

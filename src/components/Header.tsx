@@ -22,15 +22,15 @@ export default function Header() {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-6 md:px-12 bg-white/90 backdrop-blur-sm"
+      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-6 py-6 md:px-12 bg-white/90 backdrop-blur-sm"
     >
-      <div className="text-xs font-bold tracking-widest uppercase text-editorial-orange">
+      <div className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-editorial-orange">
         <a href="/" onClick={scrollToTop} className="hover:text-editorial-orange transition-colors cursor-pointer">
           João Vítor Moço Santos
         </a>
       </div>
       
-      <nav className="flex items-center gap-8 text-xs font-medium tracking-widest uppercase text-gray-500">
+      <nav className="flex items-center gap-4 sm:gap-6 md:gap-8 text-[10px] sm:text-xs font-medium tracking-widest uppercase text-gray-500">
         <Link href="#trajetoria" className="hover:text-editorial-orange transition-colors">
           <AnimatePresence mode="wait">
             <motion.span
