@@ -129,7 +129,7 @@ export default function About() {
             </h4>
             <div className="flex flex-col gap-3">
               <a
-                href="/curriculo/Curriculo - João Vítor Moço Santos.pdf"
+                href="/curriculo/Curriculo - João Vítor Moço Santos - Março.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 border border-editorial-orange text-editorial-orange px-4 py-2.5 text-xs font-bold tracking-widest uppercase transition-all duration-300 hover:bg-editorial-orange hover:text-white"
@@ -142,7 +142,7 @@ export default function About() {
                 Português
               </a>
               <a
-                href="/curriculo/Curriculum - João Vítor Moço Santos.pdf"
+                href="/curriculo/Curriculum - João Vítor Moço Santos - March.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 border border-editorial-orange text-editorial-orange px-4 py-2.5 text-xs font-bold tracking-widest uppercase transition-all duration-300 hover:bg-editorial-orange hover:text-white"
