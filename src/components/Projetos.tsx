@@ -42,7 +42,7 @@ const projects: { pt: Project[]; en: Project[] } = {
       type: 'COMMERCIAL PROJECT',
       title: 'SITE COMERCIAL CORPORATIVO',
       description:
-        'Reconstrução integral da plataforma institucional utilizando tecnologias de ponta para garantir máxima performance. Responsável pela definição da stack e implementação de interfaces dinâmicas, elevando o padrão tecnológico da entrega corporativa.',
+        'Responsável pelo ciclo completo de desenvolvimento do novo portal da empresa. Atuação desde a definição da stack tecnológica e arquitetura até o deploy, garantindo alta performance, SEO e integração direta com APIs RESTful.',
       tags: 'NEXT.JS / REACT / TYPESCRIPT / TAILWIND CSS',
       link: 'https://www.centaurotelecom.com.br/',
       reversed: false,
@@ -68,9 +68,9 @@ const projects: { pt: Project[]; en: Project[] } = {
       media: {
         type: 'slideshow',
         images: [
-          '/projetos/saas1.webp',
-          '/projetos/saas2.webp',
-          '/projetos/saas3.webp',
+          '/projetos/abnt1.webp',
+          '/projetos/abnt2.webp',
+          '/projetos/abnt3.webp',
         ],
       },
     },
@@ -107,9 +107,9 @@ const projects: { pt: Project[]; en: Project[] } = {
       media: {
         type: 'slideshow',
         images: [
-          '/projetos/saas1.webp',
-          '/projetos/saas2.webp',
-          '/projetos/saas3.webp',
+          '/projetos/abnt1.webp',
+          '/projetos/abnt2.webp',
+          '/projetos/abnt3.webp',
         ],
       },
     },
@@ -152,9 +152,8 @@ export default function Projetos() {
         {list.map((project, index) => (
           <div
             key={project.number}
-            className={`flex flex-col md:flex-row gap-12 md:gap-24 items-center ${
-              project.reversed ? 'md:flex-row-reverse' : ''
-            }`}
+            className={`flex flex-col md:flex-row gap-12 md:gap-24 items-center ${project.reversed ? 'md:flex-row-reverse' : ''
+              }`}
           >
             {/* Media Side */}
             <motion.div

@@ -15,7 +15,7 @@ const content = {
         role: 'FULL STACK & IT OPS',
         company: 'CENTAURO ENGENHARIA',
         description:
-          'Liderança técnica do novo site comercial da empresa, do zero ao deploy com Next.js e TypeScript. Atuação simultânea no suporte à infraestrutura corporativa, incluindo Active Directory, segurança de dados e Microsoft 365.',
+          'Liderança técnica focada em engenharia de software e modernização de sistemas corporativos. Responsável pela refatoração completa e evolução de código legado em PHP/SQL, estruturação de banco de dados e desenvolvimento Front-End avançado utilizando Next.js e React para as novas soluções web da empresa.',
       },
       {
         year: '2022 — 2025',
